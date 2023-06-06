@@ -1,0 +1,466 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
+    font-size: 1rem;
+    text-align: center;
+    height: 100vh;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .card {
+    position: relative;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  /* Nav Bar */
+
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem .6rem 3rem;
+  }
+
+  .nav-link {
+    border-bottom: solid #3beca9 3px;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+
+    padding-bottom: 4px;
+    text-decoration: none;
+  }
+
+  /* Top Section */
+
+  .top-section-bg {
+    position: relative;
+    height: 480px;
+
+    background-color: #24053E;
+  }
+
+  .top-section {
+    margin: 0 auto;
+    max-width: 375px;
+  }
+
+  .title {
+    color: white;
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 300;
+    font-size: 2.4rem;
+
+    line-height: 1.2;
+  }
+
+  .title-span {
+    border-bottom: solid #3beca9  3px;
+  }
+
+  .button {
+    background-color: #3beca9;
+
+    width: 36%;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+
+  .btn {
+    color: black;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+
+    text-decoration: none;
+  }
+
+  .phone {
+    width: 320px;
+    height: 230px;
+    margin: 4rem auto 0;
+  }
+
+  .pattern-1,
+  .pattern-2,
+  .pattern-1-bottom {
+    display: none;
+  }
+
+  /* Three Info Section */
+
+  .three-info-section {
+    padding: 6rem 0rem 3rem;
+    background-color: #FCF8FF;
+  }
+
+  .number {
+    border: solid black 1px;
+    border-radius: 50%;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 1.2rem;
+
+    width: 14%;
+    padding: .7rem;
+    margin: 3rem auto 0;
+  }
+
+  .section-title {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 1.4rem 0;
+  }
+
+  .three-section-info {
+    font-family: 'Manrope', sans-serif;
+    
+    padding: 0 1rem;
+  }
+
+  /* Selfie Section */
+
+  .selfie {
+    margin: 8em auto;
+    width: 280px;
+    height: 300px;
+  }
+
+  /* Dark Card Section */
+
+  .dark-card {
+    background-color: #24053E;
+
+    position: absolute;
+    top: 97%;
+    left: 5%;
+  }
+
+  .dark-card-title {
+    color: white;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 1.6rem;
+
+    padding: 1.6rem 2rem 1rem;
+  }
+
+  .dark-card-info {
+    color: #FCF8FF;
+    font-family: 'Manrope', sans-serif;
+
+    line-height: 1.6;
+    padding: 0 1.6rem;
+  }
+
+  .bottom-button {
+    width: 50%;
+  }
+
+  .botton-btn {
+    font-weight: bold;
+  }
+
+  /* Footer Section */
+
+  footer {
+    position: relative;
+    margin-top: 20rem;
+  }
+
+  .bottom-logo {
+    margin: 0 auto;
+    padding-top: 3rem;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: space-between;
+
+    width: 34%;
+    margin: 3rem auto;
+    padding-bottom: 4rem;
+  }
+  
+
+  @media screen and (min-width: 650px) {
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .pattern-1,
+    .pattern-2,
+    .pattern-1-bottom {
+      display: block;
+    }
+
+    .pattern-1 {
+      position: absolute;
+      top: 12%;
+      right: 84%;
+    }
+
+    .pattern-2 {
+      position: absolute;
+      top: 55%;
+      left: 89%;
+
+    }
+
+    .pattern-1-bottom {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+
+      width: 50%;
+      height: 50%;
+    }
+    
+    .phone {
+      width: 420px;
+      height: 300px;
+
+    }
+
+    .three-info-section {
+      display: grid;
+      grid-template-rows: 1fr;
+      min-width: 100%;
+    }
+
+    .three-info-section-content {
+      margin-top: 3rem;
+      margin-bottom: 5rem;
+    }
+
+    .first,
+    .second,
+    .third {
+      display: flex;
+      margin-top: 4rem;
+      text-align: left;
+    }
+
+    .section-title {
+      margin: 1rem;
+    }
+
+    .section-content {
+      padding-right: 7.5rem;
+    }
+
+    .number {
+      width: 9%;
+      height: 50%;
+      padding: .8rem 1.5rem;
+    }
+
+    .selfie {
+      position: absolute;
+      top: 98%;
+      left: 4%;
+    }
+
+    .dark-card {
+      width: 60%;
+      left: 32%;
+      top: 118%;
+
+      text-align: left;
+      padding: 1rem;
+    }
+
+    .bottom-button {
+      margin: 1.6rem;
+      width: 36%;
+    }
+
+    footer {
+      margin-top: 45rem;
+    }
+
+    .socials {
+      justify-content: space-evenly;
+    }
+  }
+
+
+  @media screen and (min-width: 1200px) {
+
+    .nav-bar {
+      padding: 2rem 6rem 3rem;
+    }
+
+    .title {
+      font-size: 3rem;
+    }
+
+    .pattern-1 {
+      top: 20%;
+      right: 90%;
+    }
+
+    .pattern-2 {
+      top: 48%;
+      left: 92%;
+    }
+
+    .phone {
+      width: 500px;
+      height: 300px;
+    }
+
+    .three-info-section-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      min-width: 100%;
+      padding-top: 4rem;
+    }
+
+    .first,
+    .second,
+    .third {
+      display: flex;
+      flex-direction: column;
+
+      text-align: center;
+    }
+
+    .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 10%;
+      height: 50%;
+      padding: 1rem 2rem;
+
+      align-self: center;
+      margin: 0;
+    }
+
+    .section-content {
+      padding: 0;
+      margin: 0;
+    }
+
+    .selfie {
+      width: 400px;
+      height: 300px;
+    }
+
+    .dark-card {
+      width: 50%;
+      height: 30%;
+      left: 37%;
+      top: 115%;
+
+      text-align: left;
+      padding: 1rem;
+    }
+
+    .dark-card-title {
+      font-size: 2.4rem;
+    }
+
+    .bottom-button {
+      text-align: center;
+    }
+
+    .socials {
+      width: 14%;
+    }
+  }
+  
+  @media screen and (min-width: 1440px) {
+
+    .phone {
+      width: 600px;
+      height: 400px;
+      left: 34%;
+      top: 80%;
+    }
+
+    .pattern-2 {
+      left: 95%;
+    }
+
+    .three-info-section-content {
+      margin-top: 10rem;
+      margin-bottom: 10rem;
+    }
+
+    .selfie {
+      width: 500px;
+    }
+
+    .dark-card {
+      width: 60%;
+      height: 30%;
+      left: 26%;
+      top: 120%;
+    }
+    
+    .pattern-1-bottom {
+      width: 80%;
+      height: 80%;
+      top: 50%;
+      left: 30%;
+    }
+
+    footer {
+      padding-top: 6rem;
+    }
+  }
